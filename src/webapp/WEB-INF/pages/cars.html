@@ -6,18 +6,41 @@
     <title>Cars Table</title>
 
     <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
         table {
             width: 50%; /* Ширина таблицы */
             background: black; /* Цвет фона таблицы */
-            color: chartreuse; /* Цвет текста */
-            border-spacing: 1px; /* Расстояние между ячейками */
+            color: black; /* Цвет текста */
+            border-spacing: 2px; /* Расстояние между ячейками */
+            margin: 0 auto;
         }
 
         td, th {
-            background: black; /* Цвет фона ячеек */
-            padding: 5px; /* Поля вокруг текста */
+            background: white; /* Цвет фона ячеек *!*/
+            padding: 2px; /* Поля вокруг текста */
             text-align: left;
+            width: 25%;
         }
+
+        button {
+            width: 50px;
+            height: 20px;
+        }
+        .add-user-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
     </style>
 
 </head>
@@ -32,8 +55,10 @@
         <td th:text="${car.getModel()}">model</td>
         <td th:text="${car.getColor()}">color</td>
         <td th:text="${car.getMade()}">made</td>
-
     </tr>
 </table>
+<div class="add-user-link">
+    <h2 style="text-align: center"><a href="/">Back to Hello Page</a></h2>
+</div>
 </body>
 </html>

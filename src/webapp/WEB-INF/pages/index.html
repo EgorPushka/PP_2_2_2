@@ -4,6 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .link {
+            margin-top: 20px;
+        }
+        .link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .link a:hover {
+            background-color: #555;
+        }
+        .form-container {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container label {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .form-container input[type="number"] {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        .form-container button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .form-container button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
 <div>
@@ -11,5 +72,22 @@
         <h1 th:text="${msg}"></h1>
     </th:block>
 </div>
+<br/>
+
+<div class="link">
+    <a href="/cars">Go to All Cars</a>
+</div>
+<br/>
+
+
+<div class="form-container">
+
+    <form action="/cars" method="get">
+        <label for="count">Enter a number:</label>
+        <input type="number" id="count" name="count" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
 </body>
 </html>
